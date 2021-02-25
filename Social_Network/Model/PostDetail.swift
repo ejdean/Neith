@@ -9,28 +9,25 @@ import Foundation
 
 struct PostDetail: View {
     var post: Post
-    
     var body: some View {
         VStack {
             HStack {
-                    circleImage(image: post.image)
-                Text(post.Author)
-                        .font(.callout)
-                        .foregroundColor(Color.gray)
-                    Spacer()
-                Text(post.Time)
+                circleImage(image: post.image)
+                    .padding(2)
+                Text(post.Body)
+                    .frame(width: 260, height:50)
                     .font(.callout)
                     .foregroundColor(Color.gray)
             }
-            .padding(5)
-            Text(post.Body)
-            .padding()
-            Divider()
+            Text(post.Author + " " + post.Time + " ago")
+                .font(.callout)
+                .foregroundColor(Color.gray)
+                .frame(width: 300, height: 30, alignment: .bottomTrailing)
         }
         .padding()
         .overlay(
-            RoundedRectangle(cornerRadius: 20)
-                .stroke(Color.gray, lineWidth: 6)
+            RoundedRectangle(cornerRadius: 5)
+                .stroke(Color.gray, lineWidth: 3)
                 .padding(10))
     }
 }
@@ -41,6 +38,6 @@ struct PostDetail_Previews: PreviewProvider {
             PostDetail(post: Posts[0])
             PostDetail(post: Posts[1])
             PostDetail(post: Posts[2])
-        }.previewLayout(.fixed(width: 400, height: 200))
+        }.previewLayout(.fixed(width: 390, height: 300))
     }
 }

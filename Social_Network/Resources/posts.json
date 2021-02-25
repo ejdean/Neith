@@ -3,21 +3,21 @@
 		"Author": "Edward Dean",
 		"Time":  "4h",
 		"id": 1001,
-		"Body": "I am weird",
+		"Body": "I am weird. I am weird. I am weird. I am weird. I am weird.",
         "imageName": "man"
 	},
 	{
 		"Author": "William Dean",
 		"Time":  "1w",
 		"id": 1002,
-		"Body": "I like Swift",
+		"Body": "I like Swift. I like Swift. I like Swift. I like Swift. I like Swift. I like Swift. I like Swift. I like Swift.",
         "imageName": "Will"
 	},
 	{
 		"Author": "Helen Piatkowski",
 		"Time":  "3y",
 		"id": 1003,
-		"Body": "I smell of stinky farts",
+		"Body": "I smell of stinky farts. I smell of stinky farts. I smell of stinky farts. ",
         "imageName": "Helen"
 	}
 ]
