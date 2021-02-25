@@ -16,6 +16,8 @@ struct PostDetail: View {
                     .padding(2)
                 GeometryReader { geo in
                 Text(post.Body)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .lineLimit(2)
                     .frame(width: geo.size.width, height: geo.size.height)
                     .font(.callout)
                     .foregroundColor(Color.gray)
