@@ -14,19 +14,23 @@ struct PostDetail: View {
             HStack {
                 circleImage(image: post.image)
                     .padding(2)
+                GeometryReader { geo in
                 Text(post.Body)
-                    .frame(width: 260, height:50)
+                    .frame(width: geo.size.width, height: geo.size.height)
                     .font(.callout)
                     .foregroundColor(Color.gray)
+                }
             }
+            GeometryReader { geo in
             Text(post.Author + " " + post.Time + " ago")
                 .font(.callout)
                 .foregroundColor(Color.gray)
-                .frame(width: 300, height: 30, alignment: .bottomTrailing)
+                .frame(width: geo.size.width * 0.9, height: geo.size.height * 0.3, alignment: .bottomTrailing)
+            }
         }
         .padding()
         .overlay(
-            RoundedRectangle(cornerRadius: 5)
+            RoundedRectangle(cornerRadius: 7)
                 .stroke(Color.gray, lineWidth: 3)
                 .padding(10))
     }
@@ -38,6 +42,6 @@ struct PostDetail_Previews: PreviewProvider {
             PostDetail(post: Posts[0])
             PostDetail(post: Posts[1])
             PostDetail(post: Posts[2])
-        }.previewLayout(.fixed(width: 390, height: 300))
+        }.previewLayout(.fixed(width: 390, height: 120))
     }
 }

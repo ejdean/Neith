@@ -9,9 +9,10 @@ import SwiftUI
 
 struct PostList: View {
     var body: some View {
-        List(Posts) {post_ in
-                    PostDetail(post: post_)
-                }
+        VStack {
+            List(Posts) {post_ in PostDetail(post: post_)
+            }
+        }
     }
 }
 
