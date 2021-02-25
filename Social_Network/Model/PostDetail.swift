@@ -13,24 +13,27 @@ struct PostDetail: View {
     var body: some View {
         VStack {
             HStack {
-                    circleImage()
+                    circleImage(image: post.image)
                 Text(post.Author)
                         .font(.headline)
                         .foregroundColor(Color.gray)
                     Spacer()
                 Text(post.Time)
-                        .font(.subheadline)
+                    .font(.caption)
             }
             Text(post.Body)
             .padding()
             Divider()
-            Spacer()
         }
     }
 }
 
 struct PostDetail_Previews: PreviewProvider {
     static var previews: some View {
-        PostDetail(post: Posts[0])
+        Group {
+            PostDetail(post: Posts[0])
+            PostDetail(post: Posts[1])
+            PostDetail(post: Posts[2])
+        }.previewLayout(.fixed(width: 400, height: 200))
     }
 }

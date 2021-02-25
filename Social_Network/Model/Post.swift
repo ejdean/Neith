@@ -7,14 +7,14 @@
 import Foundation
 import SwiftUI
 
-struct Post: Hashable, Codable {
-    var ID: Int
+struct Post: Hashable, Codable, Identifiable {
+    var id: Int
     var Author: String
     var Time: String
     var Body: String
     
-    internal init(ID: Int, Author: String, Time: String, Body: String, Image: String) {
-        self.ID = ID
+    internal init(id: Int, Author: String, Time: String, Body: String, Image: String) {
+        self.id = id
         self.Author = Author
         self.Time = Time
         self.Body = Body
