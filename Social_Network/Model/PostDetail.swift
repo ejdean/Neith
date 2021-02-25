@@ -15,16 +15,23 @@ struct PostDetail: View {
             HStack {
                     circleImage(image: post.image)
                 Text(post.Author)
-                        .font(.headline)
+                        .font(.callout)
                         .foregroundColor(Color.gray)
                     Spacer()
                 Text(post.Time)
-                    .font(.caption)
+                    .font(.callout)
+                    .foregroundColor(Color.gray)
             }
+            .padding(5)
             Text(post.Body)
             .padding()
             Divider()
         }
+        .padding()
+        .overlay(
+            RoundedRectangle(cornerRadius: 20)
+                .stroke(Color.gray, lineWidth: 6)
+                .padding(10))
     }
 }
 

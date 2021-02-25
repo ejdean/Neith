@@ -1,21 +1,21 @@
 [
 	{
 		"Author": "Edward Dean",
-		"Time":  "2021-02-23 00:00:00",
+		"Time":  "4h",
 		"id": 1001,
 		"Body": "I am weird",
         "imageName": "man"
 	},
 	{
 		"Author": "William Dean",
-		"Time":  "2021-02-23 00:00:01",
+		"Time":  "1w",
 		"id": 1002,
 		"Body": "I like Swift",
         "imageName": "Will"
 	},
 	{
 		"Author": "Helen Piatkowski",
-		"Time":  "2021-02-23 00:00:02",
+		"Time":  "3y",
 		"id": 1003,
 		"Body": "I smell of stinky farts",
         "imageName": "Helen"
