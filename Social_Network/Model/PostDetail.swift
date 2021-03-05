@@ -24,7 +24,6 @@ struct PostDetail: View {
                 }
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 Text(postedBy + postedAgo)
-//                Text("Posted by " + post.Author + " " + String(post.Time) + "Ago")
                     .font(.callout)
                     .foregroundColor(Color.gray)
         }
