@@ -11,13 +11,15 @@ struct ImagePostDetail: View {
     var post: Post
     
     var body: some View {
+        let postedBy = "Posted by " + post.Author + " "
+        let postedAgo = String(post.Time) + " Ago"
         VStack(alignment: .trailing) {
             Image(post.imageBodyName)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .clipShape(RoundedRectangle(cornerRadius: 7))
                     .overlay(circleImage(image: post.imageProfile).padding(5), alignment: .topLeading)
-            Text(post.Author + " " + String(post.Time))
+            Text(postedBy + postedAgo)
                 .font(.callout)
                 .foregroundColor(Color.gray)
                 .frame(alignment: .bottomTrailing)

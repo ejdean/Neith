@@ -10,6 +10,8 @@ import Foundation
 struct PostDetail: View {
     var post: Post
     var body: some View {
+        let postedBy = "Posted by " + post.Author + " "
+        let postedAgo = String(post.Time) + " Ago"
         VStack(alignment: .trailing) {
             HStack() {
                     circleImage(image: post.imageProfile)
@@ -21,7 +23,8 @@ struct PostDetail: View {
                         .foregroundColor(Color.gray)
                 }
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                Text(post.Author + " " + String(post.Time))
+                Text(postedBy + postedAgo)
+//                Text("Posted by " + post.Author + " " + String(post.Time) + "Ago")
                     .font(.callout)
                     .foregroundColor(Color.gray)
         }

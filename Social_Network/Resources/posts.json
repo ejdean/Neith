@@ -3,7 +3,7 @@
 		"Author": "Edward Dean",
 		"Time":  200,
 		"id": 1001,
-		"Body": "I am weird",
+		"Body": "I am weird I am weird I am weird I am weird I am weird I am weird I am weird I am weird",
         "imageProfileName": "man",
         "isImagePost": false,
         "imageBodyName": "man"
@@ -12,7 +12,7 @@
 		"Author": "William Dean",
 		"Time":  100,
 		"id": 1002,
-		"Body": "I like Swift",
+		"Body": "I like Swift I like Swift I like Swift",
         "imageProfileName": "Will",
         "isImagePost": false,
         "imageBodyName": "Will"

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PostList: View {
     var body: some View {
-        ScrollView(.vertical){
+        ScrollView() {
             VStack(spacing: -15) {
                 ForEach(Posts.sorted()){post_ in
                     if post_.isImagePost{
