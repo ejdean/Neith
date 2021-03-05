@@ -12,7 +12,7 @@ struct PostDetail: View {
     var body: some View {
         VStack {
             HStack {
-                circleImage(image: post.image)
+                circleImage(image: post.imageProfile)
                     .padding(2)
                 GeometryReader { geo in
                 Text(post.Body)
@@ -24,7 +24,7 @@ struct PostDetail: View {
                 }
             }
             GeometryReader { geo in
-            Text(post.Author + " " + String(post.Time) + " ago")
+            Text(post.Author + " " + String(post.Time))
                 .font(.callout)
                 .foregroundColor(Color.gray)
                 .frame(width: geo.size.width * 0.9, height: geo.size.height * 0.3, alignment: .bottomTrailing)
