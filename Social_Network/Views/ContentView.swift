@@ -9,9 +9,19 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Text("Yo playerz, welcome to Neith the sickest social you've ever balled with")
-                .font(.headline)
-                .multilineTextAlignment(.center)
+            HStack {
+                Text("Profile")
+                    .font(.callout)
+                    .foregroundColor(Color.gray)
+                Spacer()
+                Text("Freinds")
+                    .font(.callout)
+                    .foregroundColor(Color.gray)
+                Spacer()
+                Text("Settings")
+                    .font(.callout)
+                    .foregroundColor(Color.gray)
+            }.padding(8)
             PostList()
         }
     }

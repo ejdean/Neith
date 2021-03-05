@@ -10,32 +10,27 @@ import Foundation
 struct PostDetail: View {
     var post: Post
     var body: some View {
-        VStack {
-            HStack {
-                circleImage(image: post.imageProfile)
-                    .padding(2)
-                GeometryReader { geo in
-                Text(post.Body)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .lineLimit(2)
-                    .frame(width: geo.size.width, height: geo.size.height)
+        VStack(alignment: .trailing) {
+            HStack() {
+                    circleImage(image: post.imageProfile)
+                        .padding(5)
+                    Text(post.Body)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .lineLimit(2)
+                        .font(.callout)
+                        .foregroundColor(Color.gray)
+                }
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                Text(post.Author + " " + String(post.Time))
                     .font(.callout)
                     .foregroundColor(Color.gray)
-                }
-            }
-            GeometryReader { geo in
-            Text(post.Author + " " + String(post.Time))
-                .font(.callout)
-                .foregroundColor(Color.gray)
-                .frame(width: geo.size.width * 0.9, height: geo.size.height * 0.3, alignment: .bottomTrailing)
-
-            }
         }
         .padding()
+        .frame(minWidth: 0, maxWidth: .infinity)
         .overlay(
             RoundedRectangle(cornerRadius: 7)
                 .stroke(Color.gray, lineWidth: 3)
-                .padding(10))
+                .padding(12))
     }
 }
 
@@ -45,6 +40,6 @@ struct PostDetail_Previews: PreviewProvider {
             PostDetail(post: Posts[0])
             PostDetail(post: Posts[1])
             PostDetail(post: Posts[2])
-        }.previewLayout(.fixed(width: 390, height: 120))
+        }.previewLayout(.fixed(width: 390, height: 390))
     }
 }
