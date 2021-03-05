@@ -24,10 +24,11 @@ struct PostDetail: View {
                 }
             }
             GeometryReader { geo in
-            Text(post.Author + " " + post.Time + " ago")
+            Text(post.Author + " " + String(post.Time) + " ago")
                 .font(.callout)
                 .foregroundColor(Color.gray)
                 .frame(width: geo.size.width * 0.9, height: geo.size.height * 0.3, alignment: .bottomTrailing)
+
             }
         }
         .padding()
