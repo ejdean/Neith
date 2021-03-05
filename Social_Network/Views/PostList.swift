@@ -9,9 +9,17 @@ import SwiftUI
 
 struct PostList: View {
     var body: some View {
-        List(Posts) {post_ in
+//        List(Posts.sorted()){post_ in PostDetail(post: post_)}
+        ScrollView(.vertical){
+        VStack {
+            ForEach(Posts.sorted()){post_ in
+                if post_.isImagePost{
+                    ImagePostDetail(post: post_)
+                } else {
                     PostDetail(post: post_)
                 }
+            }
+        }}
     }
 }
 

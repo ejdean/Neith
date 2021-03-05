@@ -1,13 +1,13 @@
 //
-//  PostDetail.swift
+//  ImagePostDetail.swift
 //  Social_Network
 //
-//  Created by William Dean on 23/02/2021.
+//  Created by William Dean on 25/02/2021.
 //
-import SwiftUI
-import Foundation
 
-struct PostDetail: View {
+import SwiftUI
+
+struct ImagePostDetail: View {
     var post: Post
     
     var body: some View {
@@ -21,19 +21,16 @@ struct PostDetail: View {
                 Text(String(post.Time))
                     .font(.caption)
             }
-            Text(post.Body)
-            .padding()
+            Image(post.imageBodyName)
+                .resizable()
+                .frame(width: 300.0, height: 200.0)
             Divider()
         }
     }
 }
 
-struct PostDetail_Previews: PreviewProvider {
+struct ImagePostDetail_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            PostDetail(post: Posts[0])
-            PostDetail(post: Posts[1])
-            PostDetail(post: Posts[2])
-        }.previewLayout(.fixed(width: 400, height: 200))
+        ImagePostDetail(post: Posts[1])
     }
 }
