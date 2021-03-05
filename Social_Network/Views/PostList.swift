@@ -9,7 +9,6 @@ import SwiftUI
 
 struct PostList: View {
     var body: some View {
-//        List(Posts.sorted()){post_ in PostDetail(post: post_)}
         ScrollView(.vertical){
         VStack {
             ForEach(Posts.sorted()){post_ in
