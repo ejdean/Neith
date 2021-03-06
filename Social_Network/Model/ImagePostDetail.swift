@@ -11,21 +11,24 @@ struct ImagePostDetail: View {
     var post: Post
     
     var body: some View {
-        VStack {
-            HStack {
-                    circleImage(image: post.imageProfile)
-                Text(post.Author)
-                        .font(.headline)
-                        .foregroundColor(Color.gray)
-                    Spacer()
-                Text(String(post.Time))
-                    .font(.caption)
-            }
+        let postedBy = "Posted by " + post.Author + " "
+        let postedAgo = String(post.Time) + " Ago"
+        VStack(alignment: .trailing) {
             Image(post.imageBodyName)
-                .resizable()
-                .frame(width: 300.0, height: 200.0)
-            Divider()
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .clipShape(RoundedRectangle(cornerRadius: 7))
+                    .overlay(circleImage(image: post.imageProfile).padding(5), alignment: .topLeading)
+            Text(postedBy + postedAgo)
+                .font(.callout)
+                .foregroundColor(Color.gray)
+                .frame(alignment: .bottomTrailing)
         }
+        .padding()
+        .overlay(
+                RoundedRectangle(cornerRadius: 7)
+                    .stroke(Color.gray, lineWidth: 3)
+                    .padding(12))
     }
 }
 
