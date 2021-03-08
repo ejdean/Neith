@@ -6,7 +6,9 @@
 //
 import Foundation
 
+var Profiles: [Int: Profile] = load("Profiles.json")
 var Posts: [Post] = load("Posts.json")
+
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data

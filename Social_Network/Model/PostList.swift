@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct PostList: View {
+    var following: [Int]
+    
     var body: some View {
         ScrollView() {
             VStack(spacing: -15) {
                 ForEach(Posts.sorted()){post_ in
-                    if post_.isImagePost{
-                        ImagePostDetail(post: post_)
-                    } else {
-                        PostDetail(post: post_)
+                    if following.contains(post_.AuthorID){
+                        if post_.isImagePost{
+                            ImagePostDetail(post: post_)
+                        } else {
+                            PostDetail(post: post_)
+                        }
                     }
                 }
             }
@@ -25,6 +29,6 @@ struct PostList: View {
 
 struct PostList_Previews: PreviewProvider {
     static var previews: some View {
-        PostList()
+        PostList(following: [1, 2, 3]) // All Users - This needs making dynamic
     }
 }

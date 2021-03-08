@@ -26,7 +26,7 @@ struct ContentView: View {
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                 .padding(5)
             }.padding(5)
-            PostList()
+            PostList(following: [1, 2, 3])
         }
     }
 }

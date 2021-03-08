@@ -1,55 +1,49 @@
 [
 	{
-		"Author": "Edward Dean",
+		"AuthorID": 1,
 		"Time":  200,
 		"id": 1001,
 		"Body": "I am weird I am weird I am weird I am weird I am weird I am weird I am weird I am weird",
-        "imageProfileName": "man",
         "isImagePost": false,
         "imageBodyName": "man"
 	},
 	{
-		"Author": "William Dean",
+		"AuthorID": 2,
 		"Time":  100,
 		"id": 1002,
 		"Body": "I like Swift I like Swift I like Swift",
-        "imageProfileName": "Will",
         "isImagePost": false,
         "imageBodyName": "Will"
 	},
 	{
-		"Author": "Helen Piatkowski",
+		"AuthorID": 3,
 		"Time":  300,
 		"id": 1003,
 		"Body": "I smell of stinky farts",
-        "imageProfileName": "Helen",
         "isImagePost": false,
         "imageBodyName": "Helen"
 	},
     {
-        "Author": "Edward Dean",
+        "AuthorID": 1,
         "Time":  210,
         "id": 1004,
         "Body": "I am weird",
-        "imageProfileName": "man",
         "isImagePost": true,
         "imageBodyName": "man"
     },
     {
-        "Author": "William Dean",
+        "AuthorID": 2,
         "Time":  110,
         "id": 1005,
         "Body": "I like Swift",
-        "imageProfileName": "Will",
         "isImagePost": true,
         "imageBodyName": "Will"
     },
     {
-        "Author": "Helen Piatkowski",
+        "AuthorID": 3,
         "Time":  310,
         "id": 1006,
         "Body": "I smell of stinky farts",
-        "imageProfileName": "Helen",
         "isImagePost": true,
         "imageBodyName": "Helen"
     }

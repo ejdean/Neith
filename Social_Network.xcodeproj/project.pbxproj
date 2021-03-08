@@ -11,6 +11,9 @@
 		6AB2A45025E539CF0084DACB /* Social_NetworkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB2A44F25E539CF0084DACB /* Social_NetworkApp.swift */; };
 		6AB2A45425E539D00084DACB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AB2A45325E539D00084DACB /* Assets.xcassets */; };
 		6AB2A45725E539D00084DACB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AB2A45625E539D00084DACB /* Preview Assets.xcassets */; };
+		BE11E18625F3707E00895B7D /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE11E18525F3707E00895B7D /* Profile.swift */; };
+		BE11E18925F3716500895B7D /* Profiles.json in Resources */ = {isa = PBXBuildFile; fileRef = BE11E18825F3716500895B7D /* Profiles.json */; };
+		BE11E18C25F3724400895B7D /* ProfileDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE11E18B25F3724400895B7D /* ProfileDetail.swift */; };
 		BE34F0E925E7B36700D23A4E /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE34F0E825E7B36700D23A4E /* PostList.swift */; };
 		BE817A6225E54B6F0091B36D /* circleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE817A6125E54B6F0091B36D /* circleImage.swift */; };
 		BE817A6525E5540A0091B36D /* Posts.json in Resources */ = {isa = PBXBuildFile; fileRef = BE817A6425E554090091B36D /* Posts.json */; };
@@ -27,6 +30,9 @@
 		6AB2A45325E539D00084DACB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6AB2A45625E539D00084DACB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6AB2A45825E539D00084DACB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE11E18525F3707E00895B7D /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		BE11E18825F3716500895B7D /* Profiles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Profiles.json; sourceTree = "<group>"; };
+		BE11E18B25F3724400895B7D /* ProfileDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetail.swift; sourceTree = "<group>"; };
 		BE34F0E825E7B36700D23A4E /* PostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
 		BE817A6125E54B6F0091B36D /* circleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circleImage.swift; sourceTree = "<group>"; };
 		BE817A6425E554090091B36D /* Posts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Posts.json; sourceTree = "<group>"; };
@@ -88,9 +94,10 @@
 		BE817A7125E556B90091B36D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BE817A6125E54B6F0091B36D /* circleImage.swift */,
-				BE34F0E825E7B36700D23A4E /* PostList.swift */,
 				6A85119325E7DDD300C8BAF2 /* ContentView.swift */,
+				BEF7892A25E838B800487E36 /* ImagePostDetail.swift */,
+				BE11E18B25F3724400895B7D /* ProfileDetail.swift */,
+				BE817A7525E5588D0091B36D /* PostDetail.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -98,10 +105,10 @@
 		BE817A7225E556E90091B36D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BE34F0E825E7B36700D23A4E /* PostList.swift */,
 				BE817A6B25E554420091B36D /* Post.swift */,
-				BEF7892A25E838B800487E36 /* ImagePostDetail.swift */,
-				BE817A7525E5588D0091B36D /* PostDetail.swift */,
 				BE817A6E25E556370091B36D /* ModelData.swift */,
+				BE11E18525F3707E00895B7D /* Profile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -109,7 +116,9 @@
 		BE817A7425E557160091B36D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BE11E18825F3716500895B7D /* Profiles.json */,
 				BE817A6425E554090091B36D /* Posts.json */,
+				BE817A6125E54B6F0091B36D /* circleImage.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -172,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AB2A45725E539D00084DACB /* Preview Assets.xcassets in Resources */,
+				BE11E18925F3716500895B7D /* Profiles.json in Resources */,
 				BE817A6525E5540A0091B36D /* Posts.json in Resources */,
 				6AB2A45425E539D00084DACB /* Assets.xcassets in Resources */,
 			);
@@ -188,9 +198,11 @@
 				BE817A6F25E556370091B36D /* ModelData.swift in Sources */,
 				6A85119425E7DDD300C8BAF2 /* ContentView.swift in Sources */,
 				6AB2A45025E539CF0084DACB /* Social_NetworkApp.swift in Sources */,
+				BE11E18C25F3724400895B7D /* ProfileDetail.swift in Sources */,
 				BEF7892B25E838B800487E36 /* ImagePostDetail.swift in Sources */,
 				BE817A7625E5588D0091B36D /* PostDetail.swift in Sources */,
 				BE817A6C25E554420091B36D /* Post.swift in Sources */,
+				BE11E18625F3707E00895B7D /* Profile.swift in Sources */,
 				BE34F0E925E7B36700D23A4E /* PostList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

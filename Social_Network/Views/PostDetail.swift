@@ -14,7 +14,7 @@ struct PostDetail: View {
         let postedAgo = String(post.Time) + " Ago"
         VStack(alignment: .trailing) {
             HStack() {
-                    circleImage(image: post.imageProfile)
+                    circleImage(fName: post.imageProfileName)
                         .padding(5)
                     Text(post.Body)
                         .fixedSize(horizontal: false, vertical: true)

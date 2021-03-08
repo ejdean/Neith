@@ -18,7 +18,7 @@ struct ImagePostDetail: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .clipShape(RoundedRectangle(cornerRadius: 7))
-                    .overlay(circleImage(image: post.imageProfile).padding(5), alignment: .topLeading)
+                    .overlay(circleImage(fName: post.imageProfileName).padding(5), alignment: .topLeading)
             Text(postedBy + postedAgo)
                 .font(.callout)
                 .foregroundColor(Color.gray)
