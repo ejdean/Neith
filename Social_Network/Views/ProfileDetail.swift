@@ -34,6 +34,7 @@ struct ProfileDetail: View {
             }.padding(20)
             PostList(following: [profile.id]) // On your profile page you just follow yourself to see only your own posts!
         }
+        .navigationBarHidden(true)
     }
 }
 

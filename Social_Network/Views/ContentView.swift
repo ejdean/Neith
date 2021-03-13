@@ -11,10 +11,12 @@ struct ContentView: View {
         NavigationView {
             VStack(spacing: -10) {
                 HStack(alignment: .firstTextBaseline) {
-                    Image(systemName: "person.circle")
-                        .font(.system(size: 35.0))
-                        .foregroundColor(.gray)
-                        .padding(8)
+                    NavigationLink(destination: ProfileSelfDetail()) {
+                        Image(systemName: "person.circle")
+                            .font(.system(size: 35.0))
+                            .foregroundColor(.gray)
+                            .padding(8)
+                             }
                     HStack {
                         Image(systemName: "person.3.fill")
                             .font(.system(size: 25.0))
@@ -29,6 +31,7 @@ struct ContentView: View {
                 }.padding(5)
                 PostList(following: [1, 2, 3])
             }
+            .navigationBarHidden(true)
         }
     }
 }
