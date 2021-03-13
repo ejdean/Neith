@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ImagePostDetail: View {
     var post: Post
-    
+
     var body: some View {
         let postedBy = "Posted by " + post.Author + " "
         let postedAgo = String(post.Time) + " Ago"
@@ -18,7 +18,11 @@ struct ImagePostDetail: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .clipShape(RoundedRectangle(cornerRadius: 7))
-                    .overlay(circleImage(fName: post.imageProfileName).padding(5), alignment: .topLeading)
+                    .overlay(
+                        NavigationLink(destination: post.AuthorID == MeInstance.id ? AnyView(ProfileSelfDetail()) : AnyView(ProfileDetail(profile: Profiles[post.AuthorID]!))) {
+                            circleImage(fName: post.imageProfileName)
+                                .padding(5)
+                             }, alignment: .topLeading)
             Text(postedBy + postedAgo)
                 .font(.callout)
                 .foregroundColor(Color.gray)

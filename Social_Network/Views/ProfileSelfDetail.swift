@@ -1,17 +1,17 @@
 //
-//  ProfileDetail.swift
+//  ProfileSelfDetail.swift
 //  Social_Network
 //
-//  Created by William Dean on 06/03/2021.
+//  Created by William Dean on 13/03/2021.
 //
-
 import SwiftUI
 
-struct ProfileDetail: View {
-    var profile: Profile
+struct ProfileSelfDetail: View {
+    var profile: Profile {Profiles[MeInstance.id]!}
     
     var body: some View {
         VStack(alignment: .leading, spacing: -10) {
+            Text("This is your own profile page")
             HStack {
                 HStack {
                     circleImage(fName: profile.imageProfileName)
@@ -37,10 +37,11 @@ struct ProfileDetail: View {
     }
 }
 
-struct ProfileDetail_Previews: PreviewProvider {
+struct ProfileSelfDetail_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ProfileDetail(profile: Profiles[1]!)
-        } // 1 - Ed, 2 - Will, 3 - Helen is ID to Name mapping.
+            ProfileSelfDetail()
+        }
     }
 }
+

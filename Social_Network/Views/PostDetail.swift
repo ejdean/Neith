@@ -10,12 +10,14 @@ import Foundation
 struct PostDetail: View {
     var post: Post
     var body: some View {
-        let postedBy = "Posted by " + post.Author + " "
-        let postedAgo = String(post.Time) + " Ago"
+    let postedBy = "Posted by " + post.Author + " "
+    let postedAgo = String(post.Time) + " Ago"
         VStack(alignment: .trailing) {
             HStack() {
-                    circleImage(fName: post.imageProfileName)
-                        .padding(5)
+                NavigationLink(destination: post.AuthorID == MeInstance.id ? AnyView(ProfileSelfDetail()) : AnyView(ProfileDetail(profile: Profiles[post.AuthorID]!))) {
+                        circleImage(fName: post.imageProfileName)
+                            .padding(5)
+                         }
                     Text(post.Body)
                         .fixedSize(horizontal: false, vertical: true)
                         .lineLimit(2)
